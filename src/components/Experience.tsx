@@ -61,13 +61,9 @@ const experiences: Experience[] = [
   },
 ];
 
-import { Josefin_Sans } from 'next/font/google';
-
-const josefin = Josefin_Sans({ subsets: ['latin'], variable: '--font-josefin' });
-
 const Experience: React.FC = () => {
   return (
-    <section className={`${josefin.variable} min-h-screen flex flex-col items-center justify-center px-8 py-4 text-white`}>
+    <section className="min-h-screen flex flex-col items-center justify-center px-8 py-4 text-white">
       <h2 className="text-5xl font-bold mb-16 font-orbitron animate-fade-in text-purple-300" style={{ textShadow: '0 0 15px rgba(147,51,234,0.8)' }}>
         My Experience
       </h2>

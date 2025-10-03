@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="data:," />
+        <link rel="icon" href="/images/profile.png" />
       </head>
       <body className={`${inter.variable} ${orbitron.variable} ${josefin.variable} flex flex-col min-h-screen bg-black font-josefin`}>
         <Background />
