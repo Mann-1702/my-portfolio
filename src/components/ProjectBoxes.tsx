@@ -62,15 +62,15 @@ const projects: Project[] = [
 
 export default function ProjectBoxes() {
   return (
-    <section className="py-12 px-8 bg-black/20 rounded-lg shadow-lg">
-      <h3 className="text-5xl font-bold mb-8 text-purple-300 font-mono text-center animate-fade-in" style={{ textShadow: '0 0 15px rgba(147,51,234,0.8)' }}>
+    <section className="py-12 px-4 sm:px-8 bg-black/20 rounded-lg shadow-lg">
+      <h3 className="text-4xl sm:text-5xl font-bold mb-8 text-purple-300 font-mono text-center animate-fade-in" style={{ textShadow: '0 0 15px rgba(147,51,234,0.8)' }}>
         My Projects
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {projects.map(({ title, description, githubLink, imageUrl }) => (
           <div
             key={title}
-            className="p-6 bg-purple-900/30 rounded-lg shadow-lg hover:shadow-[0_0_20px_5px_rgba(147,51,234,0.7)] hover:scale-105 transition-shadow transition-transform duration-500 ease-in-out flex flex-col justify-between"
+            className="p-4 sm:p-6 bg-purple-900/30 rounded-lg shadow-lg hover:shadow-[0_0_20px_5px_rgba(147,51,234,0.7)] hover:scale-105 transition-shadow transition-transform duration-500 ease-in-out flex flex-col justify-between"
           >
             <Image
               src={imageUrl}
@@ -79,13 +79,13 @@ export default function ProjectBoxes() {
               height={200}
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
-            <h4 className="text-xl font-semibold mb-4 text-white font-mono text-left" style={{ textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>{title}</h4>
-            <p className="text-purple-200 mb-6 whitespace-pre-line text-justify">{description}</p>
+            <h4 className="text-lg sm:text-xl font-semibold mb-4 text-white font-mono text-left" style={{ textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>{title}</h4>
+            <p className="text-purple-200 mb-6 whitespace-pre-line text-justify text-sm sm:text-base">{description}</p>
             <a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-purple-700 hover:bg-purple-600 rounded text-white font-semibold transition-colors duration-300 text-center self-center"
+              className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-purple-700 hover:bg-purple-600 rounded text-white font-semibold transition-colors duration-300 text-center self-center text-sm sm:text-base"
             >
               <Image
                 src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg"

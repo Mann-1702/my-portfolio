@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function About() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -21,12 +22,12 @@ export default function About() {
     : "scale(1)";
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-8">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-8">
       <div className="max-w-6xl w-full flex flex-col gap-12">
-        <div className="flex items-start justify-between gap-12">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-12">
           <div className="text-left max-w-xl pt-10 flex-grow">
-            <h2 className="text-4xl font-bold mb-6 text-purple-300 font-orbitron animate-fade-in" style={{ textShadow: '0 0 10px rgba(147,51,234,0.5)' }}>About Me</h2>
-            <p className="text-lg text-white leading-relaxed animate-slide-up" style={{ animationDelay: '0.5s', textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-purple-300 font-orbitron animate-fade-in" style={{ textShadow: '0 0 10px rgba(147,51,234,0.5)' }}>About Me</h2>
+            <p className="text-base sm:text-lg text-white leading-relaxed animate-slide-up" style={{ animationDelay: '0.5s', textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>
               Hi! I’m Mann Shah, a <span className="text-purple-300">Software Development Engineer</span> based in Seattle, Washington.
               <br /><br />
               I’m currently pursuing my Master’s in Computer Science at Seattle University. I worked as a <span className="text-purple-300">Software Development Engineer Intern at Amazon (AWS Redshift)</span>, where I built an automated deployment tracking + Slack bot used across 35+ regions, boosting visibility and cutting manual work by <span className="text-purple-300">95%</span>.
@@ -40,10 +41,12 @@ export default function About() {
               🌍 Exploring new places
             </p>
           </div>
-          <img
+          <Image
             src="/images/Mann Photo3.jpg"
             alt="Mann Shah"
-            className="w-96 h-128 rounded-lg object-cover shadow-2xl shadow-purple-500/50 transition-all duration-200 mt-4"
+            width={384}
+            height={512}
+            className="w-72 sm:w-96 h-auto rounded-lg object-cover shadow-2xl shadow-purple-500/50 transition-all duration-200 mt-4"
             style={{ transform }}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovering(true)}
@@ -51,8 +54,8 @@ export default function About() {
           />
         </div>
         <div className="mt-12">
-          <h3 className="text-3xl font-bold mb-8 text-purple-300 font-orbitron animate-fade-in" style={{ animationDelay: '1s' }}>Languages and Tools</h3>
-          <div className="grid grid-cols-6 gap-6 mt-4">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-purple-300 font-orbitron animate-fade-in" style={{ animationDelay: '1s' }}>Languages and Tools</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 mt-4">
             {[
               { href: "https://developer.android.com", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg", alt: "android" },
               { href: "https://angular.io", src: "https://angular.io/assets/images/logos/angular/angular.svg", alt: "angular" },

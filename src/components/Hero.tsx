@@ -53,16 +53,16 @@ export default function Hero() {
     : "scale(1)";
 
   return (
-    <section className="min-h-screen flex items-start justify-center px-8 pt-16">
-      <div className="max-w-6xl w-full flex items-center justify-between">
-        <div className="text-left max-w-xl">
-          <h1 className="text-4xl font-bold mb-6 text-purple-300 font-orbitron animate-fade-in" style={{ textShadow: '0 0 10px rgba(147,51,234,0.5)' }}>
+    <section className="min-h-screen flex items-start justify-center px-4 sm:px-8 pt-16">
+      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start justify-between">
+        <div className="text-left max-w-xl w-full md:w-auto mb-8 md:mb-0">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-purple-300 font-orbitron animate-fade-in" style={{ textShadow: '0 0 10px rgba(147,51,234,0.5)' }}>
             Hi, I&apos;m Mann Shah
           </h1>
-          <h2 className="text-3xl font-light text-purple-200 h-12 font-orbitron animate-slide-up" style={{ animationDelay: '0.5s' }}>
+          <h2 className="text-2xl sm:text-3xl font-light text-purple-200 h-12 font-orbitron animate-slide-up" style={{ animationDelay: '0.5s' }}>
             I&apos;m a <span className="border-r-2 border-purple-400 pr-2">{displayedText}</span>
           </h2>
-          <p className="mt-8 max-w-xl text-lg text-purple-300 font-light leading-relaxed animate-slide-up" style={{ animationDelay: '0.5s', textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>
+          <p className="mt-8 max-w-xl text-base sm:text-lg text-purple-300 font-light leading-relaxed animate-slide-up" style={{ animationDelay: '0.5s', textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>
             <br />
             <span className="font-semibold animate-fade-in" style={{ animationDelay: '1s', display: 'block' }}>
               I code in <code className="font-mono">Python</code>, <code className="font-mono">Java</code>, <code className="font-mono">JavaScript</code>, and <code className="font-mono">Dart</code> — currently geeking out on Distributed Systems and getting lost in the world of LLMs.
@@ -83,7 +83,7 @@ export default function Hero() {
           width={384}
           height={512}
           priority
-          className="w-96 h-128 rounded-lg object-cover shadow-2xl shadow-purple-500/50 transition-all duration-200"
+          className="w-80 sm:w-96 h-auto rounded-lg object-cover shadow-2xl shadow-purple-500/50 transition-all duration-200"
           style={{ transform }}
           onMouseMove={handleMouseMove}
           onMouseEnter={() => setIsHovering(true)}

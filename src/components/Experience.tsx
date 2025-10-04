@@ -63,21 +63,21 @@ const experiences: Experience[] = [
 
 const Experience: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-8 py-4 text-white">
-      <h2 className="text-5xl font-bold mb-16 font-orbitron animate-fade-in text-purple-300" style={{ textShadow: '0 0 15px rgba(147,51,234,0.8)' }}>
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 py-4 text-white">
+      <h2 className="text-3xl sm:text-5xl font-bold mb-16 font-orbitron animate-fade-in text-purple-300" style={{ textShadow: '0 0 15px rgba(147,51,234,0.8)' }}>
         My Experience
       </h2>
       <div className="w-full max-w-5xl space-y-10 font-josefin">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="bg-purple-900/30 backdrop-blur-sm rounded-xl p-8 shadow-2xl border border-purple-500/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-purple-900/40"
+            className="bg-purple-900/30 backdrop-blur-sm rounded-xl p-4 sm:p-8 shadow-2xl border border-purple-500/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-purple-900/40"
             style={{ boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)" }}
           >
-            <h3 className="text-2xl font-bold mb-2 text-white font-orbitron" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>{exp.title}</h3>
-            <p className="text-lg italic mb-1 text-purple-300 font-semibold">{exp.company}, {exp.location}</p>
-            <p className="text-base mb-6 text-purple-200 font-medium">{exp.dateRange}</p>
-            <ul className="list-disc list-inside space-y-2 text-base leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white font-orbitron" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>{exp.title}</h3>
+            <p className="text-base sm:text-lg italic mb-1 text-purple-300 font-semibold">{exp.company}, {exp.location}</p>
+            <p className="text-sm sm:text-base mb-6 text-purple-200 font-medium">{exp.dateRange}</p>
+            <ul className="list-disc list-inside space-y-2 text-sm sm:text-base leading-relaxed">
               {exp.description.map((desc, i) => (
                 <li key={i} className="text-gray-200" style={{ textShadow: '0 0 5px rgba(255,255,255,0.2)' }}>{desc}</li>
               ))}
