@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const words = ["Software Development Engineer", "Full Stack Developer"];
 
@@ -68,7 +69,7 @@ export default function Hero() {
             </span>
             <br />
             <span className="font-semibold animate-fade-in" style={{ animationDelay: '2.5s', display: 'block' }}>
-              <code className="font-mono">My focus?</code><br />Building products that scale, perform, and make people go &#34;damn, that’s cool.&#34;
+              <code className="font-mono">My focus?</code><br />Building products that scale, perform, and make people go &#34;damn, that&apos;s cool.&#34;
             </span>
           </p>
           <Link href="/about" className="mt-8 inline-block text-purple-300 hover:text-purple-200 transition-colors duration-300 group italic font-semibold">
@@ -76,9 +77,12 @@ export default function Hero() {
             <span className="block w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </div>
-        <img
+        <Image
           src="/images/Mann Photo1.jpg"
           alt="Mann Shah"
+          width={384}
+          height={512}
+          priority
           className="w-96 h-128 rounded-lg object-cover shadow-2xl shadow-purple-500/50 transition-all duration-200"
           style={{ transform }}
           onMouseMove={handleMouseMove}

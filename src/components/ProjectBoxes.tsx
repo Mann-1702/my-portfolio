@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -71,9 +72,11 @@ export default function ProjectBoxes() {
             key={title}
             className="p-6 bg-purple-900/30 rounded-lg shadow-lg hover:shadow-[0_0_20px_5px_rgba(147,51,234,0.7)] hover:scale-105 transition-shadow transition-transform duration-500 ease-in-out flex flex-col justify-between"
           >
-            <img
+            <Image
               src={imageUrl}
               alt={title}
+              width={400}
+              height={200}
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
             <h4 className="text-xl font-semibold mb-4 text-white font-mono text-left" style={{ textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>{title}</h4>
@@ -84,11 +87,11 @@ export default function ProjectBoxes() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-purple-700 hover:bg-purple-600 rounded text-white font-semibold transition-colors duration-300 text-center self-center"
             >
-              <img
+              <Image
                 src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg"
                 alt="GitHub"
-                width="20"
-                height="20"
+                width={20}
+                height={20}
               />
               GitHub
             </a>
