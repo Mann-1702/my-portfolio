@@ -68,9 +68,9 @@ export default function Hero() {
               I code in <code className="font-mono">Python</code>, <code className="font-mono">Java</code>, <code className="font-mono">JavaScript</code>, and <code className="font-mono">Dart</code> — currently geeking out on Distributed Systems and getting lost in the world of LLMs.
             </span>
             <br />
-          <span className="font-semibold animate-fade-in" style={{ animationDelay: '2.5s', display: 'block' }}>
-            <code className="font-mono">My focus?</code><br />Building products that scale, perform, and make people go "damn, that&apos;s cool."
-          </span>
+            <span className="font-semibold animate-fade-in" style={{ animationDelay: '2.5s', display: 'block' }}>
+              <code className="font-mono">My focus?</code><br />Building products that scale, perform, and make people go &#34;damn, that&apos;s cool.&#34;
+            </span>
           </p>
           <Link href="/about" className="mt-8 inline-block text-purple-300 hover:text-purple-200 transition-colors duration-300 group italic font-semibold">
             Learn more about me
