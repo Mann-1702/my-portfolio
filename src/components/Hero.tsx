@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const words = ["Software Development Engineer", "Full Stack Developer"];
 
@@ -56,10 +57,10 @@ export default function Hero() {
       <div className="max-w-6xl w-full flex items-center justify-between">
         <div className="text-left max-w-xl">
           <h1 className="text-4xl font-bold mb-6 text-purple-300 font-orbitron animate-fade-in" style={{ textShadow: '0 0 10px rgba(147,51,234,0.5)' }}>
-            Hi, I’m Mann Shah
+            Hi, I&apos;m Mann Shah
           </h1>
           <h2 className="text-3xl font-light text-purple-200 h-12 font-orbitron animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            I'm a <span className="border-r-2 border-purple-400 pr-2">{displayedText}</span>
+            I&apos;m a <span className="border-r-2 border-purple-400 pr-2">{displayedText}</span>
           </h2>
           <p className="mt-8 max-w-xl text-lg text-purple-300 font-light leading-relaxed animate-slide-up" style={{ animationDelay: '0.5s', textShadow: '0 0 5px rgba(255,255,255,0.3)' }}>
             <br />
@@ -67,18 +68,21 @@ export default function Hero() {
               I code in <code className="font-mono">Python</code>, <code className="font-mono">Java</code>, <code className="font-mono">JavaScript</code>, and <code className="font-mono">Dart</code> — currently geeking out on Distributed Systems and getting lost in the world of LLMs.
             </span>
             <br />
-            <span className="font-semibold animate-fade-in" style={{ animationDelay: '2.5s', display: 'block' }}>
-              <code className="font-mono">My focus?</code><br />Building products that scale, perform, and make people go &#34;damn, that’s cool.&#34;
-            </span>
+          <span className="font-semibold animate-fade-in" style={{ animationDelay: '2.5s', display: 'block' }}>
+            <code className="font-mono">My focus?</code><br />Building products that scale, perform, and make people go "damn, that&apos;s cool."
+          </span>
           </p>
           <Link href="/about" className="mt-8 inline-block text-purple-300 hover:text-purple-200 transition-colors duration-300 group italic font-semibold">
             Learn more about me
             <span className="block w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </div>
-        <img
+        <Image
           src="/images/Mann Photo1.jpg"
           alt="Mann Shah"
+          width={384}
+          height={512}
+          priority
           className="w-96 h-128 rounded-lg object-cover shadow-2xl shadow-purple-500/50 transition-all duration-200"
           style={{ transform }}
           onMouseMove={handleMouseMove}
