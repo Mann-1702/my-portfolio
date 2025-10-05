@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mannshah.vercel.app
+
+# Sitemaps
+Sitemap: https://mannshah.vercel.app/sitemap.xml
